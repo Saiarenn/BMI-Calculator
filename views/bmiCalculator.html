@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/public/style.css">
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="/">BMI Calculator</a>
+    </div>
+</nav>
+
+<main class="container mt-5">
+    <h2>BMI Calculator</h2>
+    <form id="bmiForm" method="post" action="/bmicalculator">
+        <div class="row">
+            <div class="col-md-6">
+                <label for="height">Height (cm/inch):</label>
+                <input type="text" class="form-control" id="height" name="height" placeholder="Enter height">
+                <small class="text-danger" id="heightError"></small>
+            </div>
+            <div class="col-md-6">
+                <label for="weight">Weight (kg/lb):</label>
+                <input type="text" class="form-control" id="weight" name="weight" placeholder="Enter weight">
+                <small class="text-danger" id="weightError"></small>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-6">
+                <label for="age">Age:</label>
+                <input type="text" class="form-control" id="age" name="age" placeholder="Enter age">
+            </div>
+            <div class="col-md-6">
+                <label for="gender">Gender:</label>
+                <select class="form-control" id="gender" name="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="col-12 mt-2">
+            <label for="unit">Select Unit:</label>
+            <select class="form-control" id="unit" name="unit">
+                <option value="metric">Metric</option>
+                <option value="imperial">Imperial</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary mt-3">Calculate BMI</button>
+    </form>
+
+</main>
+
+<footer>
+    <p>Saken Oralkhan | SE-2205</p>
+</footer>
+
+</body>
+</html>
